@@ -40,7 +40,7 @@ public class CalculatorServiceImpl {
                 return a + " / " + b + " = " + (a / b);
             }
             else{
-                    throw new IllegalArgumentException("Отстутвуют входные данные");
+                    throw new IllegalArgumentException("Отстутвуют входные данные ");
                 }
             }
         }
