@@ -14,7 +14,7 @@ public class CalculatorConrtoller {
     public String hello(){
         return service.hello();
     }
-    @GetMapping(path = "/plus" )
+    @GetMapping(path = "/plus")
     public String sum(@RequestParam("num1") Integer a, @RequestParam("num2") Integer b){
         return service.sum(a,b);
     }
