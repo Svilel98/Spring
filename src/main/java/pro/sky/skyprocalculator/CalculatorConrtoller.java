@@ -9,25 +9,25 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/calculator")
 public class CalculatorConrtoller {
     @Autowired
-    CalculatorServiceImpl service;
+   public CalculatorServiceImpl service;
     @GetMapping
     public String hello(){
         return service.hello();
     }
     @GetMapping(path = "/plus")
     public String sum(@RequestParam("num1") Integer a, @RequestParam("num2") Integer b){
-        return service.sum(a,b);
+        return a + " + " + b + " = "+  service.sum(a,b);
     }
     @GetMapping(path = "/minus")
     public String minus(@RequestParam("num1") Integer a, @RequestParam("num2") Integer b){
-        return service.minus(a,b);
+        return a + " - " + b + " = "+   service.minus(a,b);
     }
     @GetMapping(path = "/multiply")
     public String multiply(@RequestParam("num1") Integer a, @RequestParam("num2") Integer b){
-        return service.multiply(a,b);
+        return a + " * " + b + " = "+  service.multiply(a,b);
     }
     @GetMapping(path = "/divide")
     public String divide(@RequestParam("num1") Integer a, @RequestParam("num2") Integer b){
-        return service.divide(a,b);
+        return a + " / " + b + " = "+ service.divide(a,b);
     }
 }
